@@ -45,6 +45,8 @@ Project Description, Ideas, Wires, Success idea
 
 
 ## Design Plan: 
+* Color Scheme: 
+* 
 
 ## Covering SASS
  * Resources:
