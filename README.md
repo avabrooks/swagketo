@@ -7,8 +7,20 @@
 * Github Officer: Crystal Widjaja
 * Technical Officer: Sarah Xie
 * Design Manager: Ava Brooks
+* Project Owner: Ava Brooks
 
-## Project Owner: Ava Brooks
+## Initial Requirements:
+**Sponsor:** Mr. Eckman(Del Norte teacher)
+* Login/signup features that allow for student and admin accounts 
+   * identifier between accounts to allow for 'school wide' posts 
+* All student resource pages
+   * Outreach numbers for all students
+   * Tutoring resources
+   * Tutorial hours 
+   * Club/sports activities
+* Easy to navigate interface with navbar and nice design 
+* Potential chat function with other students 
+
 
 ## Individual Repos:
 * [Ava](https://github.com/avabrooks/avarepository)
