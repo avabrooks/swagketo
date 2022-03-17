@@ -3,6 +3,7 @@
 * Wiki: [link](https://github.com/avabrooks/swagketo/wiki)
 
 ## Team Roles: 
+
 | Name | Github Profile | Role | Individual Repo |
 |  --- |  ---           | --- | ---              | 
 | Crystal | [@crystalwidjaja](https://github.com/crystalwidjaja)  | Scrum Master | [Crystal](https://github.com/crystalwidjaja/personaltech) | 
@@ -25,6 +26,7 @@
 * [Design Plan]()
 
 ## Tri 3 TimeBox:
+
 | Week | Theme | PBL | Ticket |
 | ------ | ----- | ----- | ---- |
 | 0| Teams, Plans, Jobs | GitHub Pages | [Ticket](https://github.com/avabrooks/swagketo/issues/1)
