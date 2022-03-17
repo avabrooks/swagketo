@@ -1,4 +1,4 @@
-# Welcome to the swagketo wiki!
+# Welcome to the swagketo!
 * Web Planning: [link](https://unblocked00.github.io/swagketo/web)
 * Wiki: [link](https://github.com/avabrooks/swagketo/wiki)
 
