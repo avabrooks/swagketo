@@ -20,6 +20,8 @@
    * Club/sports activities
 * Easy to navigate interface with navbar and nice design 
 * Potential chat function with other students 
+### Tangibles:
+* [Design Plan]()
 
 
 ## Individual Repos:
