@@ -64,6 +64,7 @@ Project Description, Ideas, Wires, Success idea
 ![](https://github.com/ridhimainukurti/p1-Valid/blob/master/src/main/resources/static/images/green.png)
       * used as accents across website
 * font: Poppins, sans-serif
+* Use Bootstrap for nav bar and templating for most efficient use of sassy
 
 ### Covering SASS
  * Resources:
@@ -72,6 +73,17 @@ Project Description, Ideas, Wires, Success idea
 
 
 ## Technical Ideas/Plans
+- Profile creation with customizable features(bio, profile picture, classes taken, etc.)
+    - sqlite.db
+    - Use MVC for profile signup/login; similar to old project [here]()
+    - db setup similar to [this]()
+- Grade calculator
+- Search for other students in the school
+- See other club activities for school wide events 
+- Connect with other students for various academic endeavours 
+- Chat with students
+- Admin can make school-wide posts
+- Class schedule connecter 
 
 
 
