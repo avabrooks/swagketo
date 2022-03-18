@@ -13,7 +13,7 @@
    * Club/sports activities
 * Easy to navigate interface with navbar and nice design 
 * Potential chat function with other students 
-* * [Design Plan]()
+* * [Design Plan](https://avabrooks.github.io/swagketo/web)
 
 ## About Team: 
 
