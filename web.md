@@ -46,7 +46,12 @@ Project Description, Ideas, Wires, Success idea
 
 ## Design Plan: 
 * Color Scheme: 
-* 
+      * Primary navy blue: #000080
+![](https://github.com/ridhimainukurti/p1-Valid/blob/master/src/main/resources/static/images/blue.png)
+ * Secondary: #006400
+![](https://github.com/ridhimainukurti/p1-Valid/blob/master/src/main/resources/static/images/green.png)
+      * used as accents across website
+* font: Poppins, sans-serif
 
 ## Covering SASS
  * Resources:
