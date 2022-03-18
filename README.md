@@ -1,6 +1,4 @@
 # Welcome to the swagketo!
-* Web Planning: [link](https://unblocked00.github.io/swagketo/web)
-* Wiki: [link](https://github.com/avabrooks/swagketo/wiki)
 
 ## Initial Requirements:
 **Sponsor:** Mr. Eckman(Del Norte teacher)
