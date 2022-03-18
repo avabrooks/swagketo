@@ -33,7 +33,10 @@ Project Description, Ideas, Wires, Success idea
          - Class schedule connecter 
 
 
-# Wiring 
+# Wiring
+
+!(web logo)[src/main/resources/static/images/web-linkdn.png]
+
 ## Templates:
  * index.html
  * layout.html
