@@ -1,7 +1,7 @@
 Project Description, Ideas, Wires, Success idea
 
 # Project Ideas
-* [Linkedin](https://www.linkedin.com/) 
+* [**Linkedin**](https://www.linkedin.com/) 
     - Platform for students: PUSD linkedin, sort by classes, 
     - Rogerhub, grade generator  
     - More DN specific = can contact principal 
@@ -18,6 +18,13 @@ Project Description, Ideas, Wires, Success idea
     - Network, social media 
     - System for Amani to be able to contact the head, advisors, etc. 
     - Sponsor = Amani 
+
+# Success Ideas 
+* [Linkedin](https://www.linkedin.com/) 
+    - Platform for students: PUSD linkedin, sort by classes, 
+    - Rogerhub, grade generator  
+    - More DN specific = can contact principal 
+    - Sponsored by DNHS 
 
 # Project Description 
 * LinkDN
@@ -58,17 +65,13 @@ Project Description, Ideas, Wires, Success idea
       * used as accents across website
 * font: Poppins, sans-serif
 
-## Covering SASS
+### Covering SASS
  * Resources:
    * [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/#starter-template)
    * [Customizing SASS](https://getbootstrap.com/docs/5.0/customize/sass/)
 
 
+## Technical Ideas/Plans
 
 
-# Success Ideas 
-* [Linkedin](https://www.linkedin.com/) 
-    - Platform for students: PUSD linkedin, sort by classes, 
-    - Rogerhub, grade generator  
-    - More DN specific = can contact principal 
-    - Sponsored by DNHS 
+
