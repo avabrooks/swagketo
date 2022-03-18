@@ -35,7 +35,9 @@ Project Description, Ideas, Wires, Success idea
 
 # Wiring
 
-!(web logo)[src/main/resources/static/images/web-linkdn.png]
+<img src="src/main/resources/static/images/web-linkdn.png"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 
 ## Templates:
  * index.html
