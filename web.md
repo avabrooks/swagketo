@@ -1,23 +1,4 @@
-Project Description, Ideas, Wires, Success idea
-
-# Project Ideas
-* [**Linkedin**](https://www.linkedin.com/) 
-    - Platform for students: PUSD linkedin, sort by classes, 
-    - Rogerhub, grade generator  
-    - More DN specific = can contact principal 
-    - Sponsored by PUSD!
-* Squirrel website
-    - Can upload pictures of squirrels 
-    - Theme song: Squirrel's in my pants - Phineas & Ferb
-    - Sponsor = Boys & Girls club 
-* Girl Scouts
-    - Buying cookies & reselling cookies to foreign countries
-    - Uploading ideas for projects 
-    - Sponsor = Vivian 
-* Second Serve Revamp
-    - Network, social media 
-    - System for Amani to be able to contact the head, advisors, etc. 
-    - Sponsor = Amani 
+{% include navigation.html %}
 
 # Success Ideas 
 * [Linkedin](https://www.linkedin.com/) 
