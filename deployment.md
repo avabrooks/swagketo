@@ -1,3 +1,5 @@
+{% include navigation.html %}
+
 Raspberry Pi - Setting Up Java Web
 
 # Discussion Questions/Policy
