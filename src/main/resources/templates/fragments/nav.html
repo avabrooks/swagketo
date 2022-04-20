@@ -1,199 +1,154 @@
 <!DOCTYPE html>
 <!-- Bootstrap Navigation Code -->
 <th:block xmlns:th="http://www.w3.org/1999/xhtml" th:fragment="header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-        <div class="container-fluid">
-            <div class="btn-group">
-                <img alt="" class="d-inline-block align-center"
-                     src=""
-                     th:src="@{/images/ncs_logo.png}"
-                     height="50"
-                     width="auto">
-                <a class="navbar-brand" th:href="@{https://nighthawkcodingsociety.com}">LinkDN</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <body class="hero-anime">
+    <style>
+        #search:focus-visible{
+            border:none;
+        }
+    </style>
 
-                <div class="collapse navbar-collapse" id="navbarHome">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" th:href="@{/}">Home<span class="sr-only"></span></a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-md navbar-light">
 
-                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown0">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink0" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Starters
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink0">
-                                <li><a class="dropdown-item" th:href="@{/starters/greet}">Spring Greeting</a></li>
-                                <li><a class="dropdown-item" th:href="@{/starters/covid19}">RapidAPI Covid19</a></li>
-                                <li><a class="dropdown-item" th:href="@{/starters/image}">Images</a></li>
+                        <a class="navbar-brand" href="/" target="_blank"><img src="images/TutorVUELogo.png" alt=""></a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto py-4 py-md-0">
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="/tutors">Option 1</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="/services">Option2</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="/subjecttutoring">slay</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Option 3</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="/ava">Ava</a>
+
+                                    </div>
+                                </li>
                             </ul>
-                        </li>
-                    </ul>
-                </div>
+                        </div>
+                        <div class="topnav-right" style="margin-right:20px;">
+                            <div class="px-3">
+                                <input style="margin-top:10px; margin-bottom:0px;border:none;" id="search" type="search" placeholder="Search" aria-label="Search">
+                            </div>
 
-                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown1">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Front-End
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink1">
-                                <li><a class="dropdown-item" th:href="@{/frontend/binary}">Binary Math</a></li>
-                                <li><a class="dropdown-item" th:href="@{/frontend/draw}">Draw on Canvas</a></li>
-                                <li><a class="dropdown-item" th:href="@{/frontend/snake}">Snake Game</a></li>
-                                <li><a class="dropdown-item" th:href="@{/frontend/life}">Life</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                        </div>
 
-                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown2">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Database
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink2">
-                                <li><a class="dropdown-item" th:href="@{/database/person}">SQL Person</a></li>
-                                <li><a class="dropdown-item" th:href="@{/database/person_search}">SQL Person Search</a></li>
-                                <li><a class="dropdown-item" th:href="@{/database/scrum}">SQL Scrum</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                        <div class="topnav-right">
+                            <div id="switch">
+                                <div id="circle"></div>
+                            </div>
+                        </div>
 
-                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown3">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                MVC-Labs
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink3">
-                                <li><a class="dropdown-item" th:href="@{/mvc/fibonacci}">Fibonacci</a></li>
-                                <li><a class="dropdown-item" th:href="@{/mvc/pali}">Palindrome</a></li>
-                                <li><a class="dropdown-item" th:href="@{/mvc/stringops}">String Ops</a></li>
-                                <li><a class="dropdown-item" th:href="@{/mvc/dataops}">Data Ops</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
 
-                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown4">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Course-materials
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink3">
-                                <li><a class="dropdown-item" href="https://csacoders.nighthawkcodingsociety.com/">Nighthawk CSA Project</a></li>
-                                <li><a class="dropdown-item" href="https://replit.com/@jmort1021/Java-Hello-Series#Main.java">ReplIt Console Project</a></li>
-                                <li><div class="dropdown-divider"></div></li>
-                                <li><a class="dropdown-item" th:href="@{/course/tri1}">Tri 1</a></li>
-                                <li><a class="dropdown-item" th:href="@{/course/tri2}">Tri 2</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
 
-            </div>
 
-            <div class="btn-group">
-                <!-- Search Box -->
-                <div class="px-3">
-                    <input id="search" type="search" placeholder="Search" aria-label="Search">
-                </div>
+                        <ul class="navbar-nav ml-auto py-4 py-md-0">
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link" href="/login">Login</a>
+                            </li>
+                        </ul>
 
-                <!-- Dark mode action -->
-                <div class="form-check form-switch">
-                    <input type="checkbox" onclick="darkFunction()" class="form-check-input" id="darkSwitch">
-                    <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+                    </nav>
                 </div>
             </div>
-
-            <!-- Navigation bar JavaScript support -->
-            <script>
-                const search = document.getElementById('search');
-                const google = 'https://www.google.com/search?q=site%3A+';
-                const site = 'https://nighthawkcodingsociety.com';
-
-                function submitted(event) {
-                    if (event.key === 'Enter') {
-                        // calculations to determine new window size at 66% of existing
-                        const reduction = 0.66;  // reduce by 66%
-                        const w = Math.trunc(window.innerWidth*reduction);
-                        const h = Math.trunc(window.outerHeight*reduction);
-                        const l = Math.trunc(window.top.screenX + ((window.innerWidth - w)/2));
-                        const t = Math.trunc(window.top.screenY + ((window.outerHeight - h)/2));
-                        const left = "left=" + l;
-                        const top = "top=" + t;
-                        const width = "width=" + w;
-                        const height = "height=" + h;
-                        const location = left + ", " + top + ", " + width + ", " + height
-
-                        // setup and display window
-                        event.preventDefault();
-                        const url = google
-                            + site
-                            + '+'
-                            + search.value;
-                        const win = window.open(url, "CompSci A Search", location);
-                        win.focus();
-                    }
-                }
-                search.addEventListener('keypress', submitted);
-
-                // Clock Control
-                // clockElement global element set for convenience
-                let clockElement = document.getElementById('clock');
-                // Execute clock function on load
-                clock();
-                // Clock update executes on each interval set by timer
-                function clock() {
-                    let date = new Date();
-                    clockElement.textContent = date.toLocaleString();
-                }
-                // Clock refresh timer, a reoccurring event
-                setInterval(clock, 1000);
-                // End Clock Control
-
-                // Dark Mode Control
-                // darkSwitch global element is set for convenience
-                const darkSwitch=document.getElementById("darkSwitch");
-                // establishes the initial state of darkSwitch on page load
-                if(darkSwitch) {
-                    // obtains the value of darkSwitch from localStorage
-                    const darkSwitchSelected =
-                        localStorage.getItem("darkSwitch") !== null &&
-                        localStorage.getItem("darkSwitch") === "dark";
-                    // sets the value of darkSwitch.checked to the global darkSwitch
-                    darkSwitch.checked=darkSwitchSelected;
-                    // if dark-mode, toggle the switch to dark-mode position
-                    if (darkSwitchSelected)
-                        document.body.classList.toggle("dark-mode");
-                }
-                // executes on each "dark mode" UI toggle
-                function darkFunction() {
-                    // toggles between off (standard CSS) and dark-mode (.dark-mode CSS)
-                    document.body.classList.toggle("dark-mode");
-                    // localStorage is used to manage darkSwitch status
-                    darkSwitch.checked
-                        ? localStorage.setItem("darkSwitch","dark")
-                        : localStorage.removeItem("darkSwitch");
-                }
-                // End Dark Mode Control
-
-
-
-
-            </script>
-
         </div>
-    </nav>
+    </div>
+    <script>
+        const search = document.getElementById('search');
+        const google = 'https://www.google.com/search?q=site%3A+';
+        const site = 'https://valid.rocks';
+
+        function submitted(event) {
+            if (event.key === 'Enter') {
+                // calculations to determine new window size at 66% of existing
+                const reduction = 0.66;  // reduce by 66%
+                const w = Math.trunc(window.innerWidth*reduction);
+                const h = Math.trunc(window.outerHeight*reduction);
+                const l = Math.trunc(window.top.screenX + ((window.innerWidth - w)/2));
+                const t = Math.trunc(window.top.screenY + ((window.outerHeight - h)/2));
+                const left = "left=" + l;
+                const top = "top=" + t;
+                const width = "width=" + w;
+                const height = "height=" + h;
+                const location = left + ", " + top + ", " + width + ", " + height
+
+                // setup and display window
+                event.preventDefault();
+                const url = google
+                    + site
+                    + '+'
+                    + search.value;
+                const win = window.open(url, "CompSci A Search", location);
+                win.focus();
+            }
+        }
+        search.addEventListener('keypress', submitted);
+    </script>
+
+    <script>
+        (function($) { "use strict";
+
+            $(function() {
+                var header = $(".start-style");
+                $(window).scroll(function() {
+                    var scroll = $(window).scrollTop();
+
+                    if (scroll >= 10) {
+                        header.removeClass('start-style').addClass("scroll-on");
+                    } else {
+                        header.removeClass("scroll-on").addClass('start-style');
+                    }
+                });
+            });
+
+            //Animation
+
+            $(document).ready(function() {
+                $('body.hero-anime').removeClass('hero-anime');
+            });
+
+            //Menu On Hover
+
+            $('body').on('mouseenter mouseleave','.nav-item',function(e){
+                if ($(window).width() > 750) {
+                    var _d=$(e.target).closest('.nav-item');_d.addClass('show');
+                    setTimeout(function(){
+                        _d[_d.is(':hover')?'addClass':'removeClass']('show');
+                    },1);
+                }
+            });
+
+            //Switch light/dark
+
+            $("#switch").on('click', function () {
+                if ($("body").hasClass("dark")) {
+                    $("body").removeClass("dark");
+                    $("#switch").removeClass("switched");
+                }
+                else {
+                    $("body").addClass("dark");
+                    $("#switch").addClass("switched");
+                }
+            });
+
+        })(jQuery);
+    </script>
+    </body>
+    <div class="my-5 py-5">
+    </div>
 
 </th:block>
