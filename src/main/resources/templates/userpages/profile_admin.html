@@ -1,0 +1,44 @@
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml" xmlns=""
+      layout:decorate="~{layout}" lang="en">
+
+<!-- <head> -->
+<th:block layout:fragment="head" th:remove="tag">
+  <title>LinkDN</title>
+</th:block>
+
+
+
+<th:block layout:fragment="body" th:remove="tag">
+  <!-- created overall container/card method for profile page-->
+    <div class="container">
+      <div class="cover-photo">
+        <img src="https://images.unsplash.com/photo-1565464027194-7957a2295fb7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" class="profile">
+      </div>
+      <!-- username-->
+      <div class="profile-name">Username</div>
+      <!-- bio-->
+      <p class="about">User Interface Designer and<br>front-end developer</p>
+      <!-- these buttons can be changed based upon user type-->
+      <button class="msg-btn">Message</button>
+      <button class="follow-btn">Following</button>
+      <div>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+</th:block>
+
+
+</html>
