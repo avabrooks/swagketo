@@ -16,10 +16,60 @@
     <div class="container py-4">
         <header class="pb-3 mb-4 border-bottom border-primary text-dark">
             <!-- header title *Doesn't need to be here if doesn't fit form layout*-->
-            <span class="fs-4">Title</span>
+            <span class="fs-4">Signup</span>
         </header>
 
         <!-- Put form content here sarah :) -->
+        <div>
+            <br>
+            <br>
+            <br>
+            <html>
+
+            <head>
+                <link rel="stylesheet" href="css/style.css">
+                <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+                <title>Sign in</title>
+            </head>
+
+            <body>
+            <div style="width:100%;display:grid;grid-template-columns: 3fr 2fr;">
+
+
+                <div class="main" style="width:100%; margin-top:-60px;">
+                    <form action="#" th:action="@{/signup}" class="form1" method="POST">
+                        <table>
+                            <tr>
+                                <td>Name:</td>
+                                <td><input type="text" placeholder="Username" class="un"/></td>
+                                <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</td>
+                            </tr>
+                            <tr>
+                                <td>Password:</td>
+                                <td><input type="password" placeholder="Password" class="pass"/></td>
+                                <td th:if="${#fields.hasErrors('password')}" th:errors="*{email}">EMail Error</td>
+                            </tr>
+
+                            <tr>
+                                <td><button class="submit" type="submit">Sign Up</button></td>
+                            </tr>
+                        </table>
+                    </form>
+
+
+                </div>
+                <div style="width:40%;">
+                    <img style="width:150%; margin-left:100px;" src="images/web-linkdn.png" alt="" class="linkdn">
+                </div>
+            </div>
+
+            </body>
+
+            </html>
+
+        </div>
 
 
 
