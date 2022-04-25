@@ -18,7 +18,7 @@ public class UserSqlMvcController implements WebMvcConfigurer {
 
 
     @Autowired
-    private com.example.sping_portfolio.data.UserSqlRepository repository;
+    private UserSqlRepository repository;
 
 
 
