@@ -16,6 +16,7 @@ public class MainController {
         return "/userpages/clubs";
     }
 
+    // test
     @GetMapping("/profile")
     public String profileTest() {
         return "/userpages/profile_admin";
