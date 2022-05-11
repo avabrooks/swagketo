@@ -22,5 +22,15 @@ public class MainController {
         return "/userpages/profile_admin";
     }
 
+    @GetMapping("/login")
+    public String login() {
+        return "/userpages/login";
+    }
+
+    @GetMapping("/signup")
+    public String signup() {
+        return "/userpages/signup";
+    }
+
 }
 
