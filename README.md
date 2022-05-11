@@ -3,7 +3,7 @@
 * Wiki: [link](https://github.com/avabrooks/swagketo/wiki)
 
 ## Team Roles: 
-* Deployment Manager: Risa 
+* Deployment Manager: Risa Iwazaki
 * Github Officer: Crystal Widjaja
 * Technical Officer: Sarah Xie
 * Design Manager: Ava Brooks
