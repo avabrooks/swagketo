@@ -32,5 +32,17 @@ public class MainController {
         return "/userpages/signup";
     }
 
+    @GetMapping("/resume")
+    public String resume() {
+        return "/services/resume";
+    }
+
+    @GetMapping("/gradecalc")
+    public String gradeCalc() {
+        return "/services/gradecalc";
+    }
+
+
+
 }
 

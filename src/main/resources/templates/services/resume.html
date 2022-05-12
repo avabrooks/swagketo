@@ -1,10 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml" xmlns=""
+      layout:decorate="~{layout}" lang="en">
 
-</body>
+<!-- <head> -->
+<th:block layout:fragment="head" th:remove="tag">
+    <title>LinkDN</title>
+</th:block>
+
+
+
+<th:block layout:fragment="body" th:remove="tag">
+    <div class="container py-4">
+        <header class="pb-3 mb-4 border-bottom border-primary text-dark">
+            <!-- header title-->
+            <span class="fs-4">Resume Creator and Tool:</span>
+        </header>
+
+
+
+
+
+        <div id="container" class="container py-4">
+        </div>
+
+    </div>
+</th:block>
+
 </html>
