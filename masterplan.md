@@ -2,6 +2,9 @@
 
 # [Masterplan](https://github.com/avabrooks/swagketo/issues/14):
 
+<img style="width: 350px; max-height: 300px" src="src/main/resources/static/images/plan1.jpg"/>
+<img style="width: 350px; max-height: 300px" src="src/main/resources/static/images/plan2.jpg"/>
+
 ## Requirements from Sponsor(Mr. Eckman)
 * login/signup page
   * user creation w/ profile page
