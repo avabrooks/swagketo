@@ -1,5 +1,13 @@
 # Welcome to the swagketo!
 
+## Tri 3 TimeBox:
+
+| Week | Theme | PBL | Ticket |
+| ------ | ----- | ----- | ---- |
+| 0| Teams, Plans, Jobs | GitHub Pages | [Ticket](https://github.com/avabrooks/swagketo/issues/1)
+| 1| Data Structures Challenge 1 | Project Set Up | [Ticket](https://github.com/avabrooks/avarepository/issues/9)
+| 8| [PBL Sponsor Requirement Presentations](https://avabrooks.github.io/swagketo/masterplan) | AP Week 2, Review 2 | [Ticket](https://github.com/avabrooks/swagketo/issues/14)
+
 ## Initial Requirements:
 **Sponsor:** Mr. Eckman(Del Norte teacher)
 * Login/signup features that allow for student and admin accounts 
@@ -24,10 +32,5 @@
 
 
 
-## Tri 3 TimeBox:
 
-| Week | Theme | PBL | Ticket |
-| ------ | ----- | ----- | ---- |
-| 0| Teams, Plans, Jobs | GitHub Pages | [Ticket](https://github.com/avabrooks/swagketo/issues/1)
-| 1| Data Structures Challenge 1 | Project Set Up | [Ticket](https://github.com/avabrooks/avarepository/issues/9)
 
