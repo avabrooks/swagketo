@@ -17,13 +17,19 @@
 
 ## Implementing Mortensen Feedback:
  * Grade Calculator:
-   * comments:
+   * comments: Make a requirement tracker (similar to STUDENTVUE) which can incorporate parts of privacy and security
+   * 
  * Resume creator:
-   * Comments
+   * Comments: Similar to Linkedn, but make it more specific to high school students
+   * Can potentially use polymorphism
+   * Can possibly automate with the profile by transfering info from profile to resume (need to save info to profiles)
 
 ## Objectives for Last 13 Days:
  * Finish website with functionality
-   * ** more indepth here **
+ * First two days will be for the actual creation of the website page
+ * Five days will be dedicated to back end
+ * Four days will be dedicated to front end
+ * Two days will be dedicated to clean up and presentation
 
 ## Individual Assignments: 
  * [Ava](https://github.com/avabrooks/swagketo/issues/16): Design layouts with colorscheme(SCSS) 
