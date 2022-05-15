@@ -18,7 +18,7 @@
 ## Implementing Mortensen Feedback:
  * Grade Calculator:
    * comments: Make a requirement tracker (similar to STUDENTVUE) which can incorporate parts of privacy and security
-   * 
+   * Can make two separate pages and add lots of graphics with bars for percentages??
  * Resume creator:
    * Comments: Similar to Linkedn, but make it more specific to high school students
    * Can potentially use polymorphism
