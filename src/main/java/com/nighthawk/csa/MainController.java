@@ -42,7 +42,10 @@ public class MainController {
         return "/services/gradecalc";
     }
 
-
+    @GetMapping("/risa")
+    public String risa() {
+        return "/aboutus/risa";
+    }
 
 }
 
