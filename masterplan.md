@@ -33,8 +33,8 @@
 
 ## Individual Assignments: 
  * [Ava](https://github.com/avabrooks/swagketo/issues/16): Design layouts with colorscheme(SCSS) 
- * [Crystal](https://github.com/avabrooks/swagketo/issues/17): Resume creator/tool 
+ * [Risa](https://github.com/avabrooks/swagketo/issues/17): Resume creator/tool 
  * [Sarah](https://github.com/avabrooks/swagketo/issues/15): Database work with different 'roles' in database for student vs admin 
- * [Risa](https://github.com/avabrooks/swagketo/issues/18): Grade calculator
+ * [Crystal](https://github.com/avabrooks/swagketo/issues/18): Grade calculator
 
 
