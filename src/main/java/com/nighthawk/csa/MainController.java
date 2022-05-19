@@ -16,6 +16,11 @@ public class MainController {
         return "/userpages/clubs";
     }
 
+    @GetMapping("/networksnav")
+    public String networks() {
+        return "/userpages/networksnav";
+    }
+
     // test
     @GetMapping("/profile")
     public String profileTest() {
