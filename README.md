@@ -7,6 +7,7 @@
 | 0| Teams, Plans, Jobs | GitHub Pages | [Ticket](https://github.com/avabrooks/swagketo/issues/1)
 | 1| Data Structures Challenge 1 | Project Set Up | [Ticket](https://github.com/avabrooks/avarepository/issues/9)
 | 8| [PBL Sponsor Requirement Presentations](https://avabrooks.github.io/swagketo/masterplan) | AP Week 2, Review 2 | [Ticket](https://github.com/avabrooks/swagketo/issues/14)
+| 9| PBL Updates | [Ticket](https://github.com/avabrooks/swagketo/issues/20)
 
 ## Initial Requirements:
 **Sponsor:** Mr. Eckman(Del Norte teacher)
