@@ -22,28 +22,23 @@ public class Posts {
     private Long id;
 
     @NotEmpty
-    @Size(min=8)
-    private String password;
+    private String message;
 
     @NonNull
     @Size(min = 2, max = 30, message = "Name (2 to 30 chars)")
     private String name;
 
-    private String recipes;
 
-
-    /* Initializer*/
-    public Posts(String password, String name, String recipes) {
-        this.password = password;
+    public Posts(String message, String name) {
         this.name = name;
-        this.recipes = recipes;
+        this.message = message;
     }
 
     public String getName(){
         return name;
     }
-    public String getRecipes(){
-        return recipes;
+    public String getMessage(){
+        return message;
     }
 
 
