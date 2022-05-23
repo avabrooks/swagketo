@@ -33,7 +33,7 @@ public class Posts {
 
 
     /* Initializer*/
-    public User(String password, String name, String recipes) {
+    public Posts(String password, String name, String recipes) {
         this.password = password;
         this.name = name;
         this.recipes = recipes;
