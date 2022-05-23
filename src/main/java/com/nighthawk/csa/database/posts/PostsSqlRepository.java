@@ -18,8 +18,8 @@ public class PostsSqlRepository {
         return jpa.findAll();
     }
 
-    public void save(Posts person) {
-        jpa.save(person);
+    public void save(Posts message) {
+        jpa.save(message);
     }
 
     public User get(long id) {
