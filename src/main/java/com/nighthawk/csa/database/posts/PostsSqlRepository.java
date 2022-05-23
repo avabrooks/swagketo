@@ -1,6 +1,6 @@
 package com.nighthawk.csa.database.posts;
 
-import com.nighthawk.csa.database.posts.Posts;
+import com.nighthawk.csa.database.user.User;
 import com.nighthawk.csa.database.user.UserJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +22,7 @@ public class PostsSqlRepository {
         jpa.save(person);
     }
 
-    public Posts get(long id) {
+    public User get(long id) {
         return jpa.findById(id).get();
     }
 
