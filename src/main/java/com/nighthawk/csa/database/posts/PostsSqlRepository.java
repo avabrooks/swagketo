@@ -14,13 +14,13 @@ public class PostsSqlRepository {
     @Autowired
     private UserJpaRepository jpa;
 
-    public  List<Posts>listAll() {
-        return jpa.findAll();
-    }
+    //public  List<Posts>listAll() {
+        //return jpa.findAll();
+    //}
 
-    public void save(Posts message) {
-        jpa.save(message);
-    }
+    //public void save(Posts message) {
+      //  jpa.save(message);
+    //}
 
     public User get(long id) {
         return jpa.findById(id).get();
