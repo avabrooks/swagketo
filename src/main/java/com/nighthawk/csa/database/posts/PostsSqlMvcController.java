@@ -19,6 +19,8 @@ public class PostsSqlMvcController {
 
     @GetMapping("/posts")
     public String posts() {
+        List<User> list = repository.listall();
+        model.addAttribute("list", list);
         return "/userpages/posts";
     }
 }
