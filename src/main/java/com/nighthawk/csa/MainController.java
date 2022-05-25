@@ -6,10 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MainController {
 
-    @GetMapping("/posts")
-    public String posts() {
-        return "/userpages/posts";
-    }
 
     @GetMapping("/clubs")
     public String clubs() {
