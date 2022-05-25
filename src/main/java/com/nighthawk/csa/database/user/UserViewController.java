@@ -23,7 +23,7 @@ public class UserViewController {
     public String user(Model model) {
         List<User> list = repository.listAll();
         model.addAttribute("list", list);
-        return "mvc/database/user";
+        return "/database/user";
     }
 
     /*  The HTML template Forms and PersonForm attributes are bound
@@ -32,7 +32,7 @@ public class UserViewController {
     */
     @GetMapping("/database/usercreate")
     public String userAdd(User user) {
-        return "mvc/database/usercreate";
+        return "/userpages/signup";
     }
 
     /* Gathers the attributes filled out in the form, tests for and retrieves validation error
@@ -43,7 +43,7 @@ public class UserViewController {
     public String userSave(@Valid User user, BindingResult bindingResult) {
         // Validation of Decorated PersonForm attributes
         if (bindingResult.hasErrors()) {
-            return "mvc/database/usercreate";
+            return "/userpages/signup";
         }
         repository.save(user);
         repository.addRoleToUser(user.getEmail(), "ROLE_STUDENT");
@@ -54,14 +54,14 @@ public class UserViewController {
     @GetMapping("/database/userupdate/{id}")
     public String userUpdate(@PathVariable("id") int id, Model model) {
         model.addAttribute("user", repository.get(id));
-        return "mvc/database/userupdate";
+        return "/database/userupdate";
     }
 
     @PostMapping("/database/userupdate")
     public String userUpdateSave(@Valid User user, BindingResult bindingResult) {
         // Validation of Decorated PersonForm attributes
         if (bindingResult.hasErrors()) {
-            return "mvc/database/userupdate";
+            return "/database/userupdate";
         }
         repository.save(user);
         repository.addRoleToUser(user.getEmail(), "ROLE_STUDENT");
@@ -78,7 +78,7 @@ public class UserViewController {
 
     @GetMapping("/database/user/search")
     public String user() {
-        return "mvc/database/user_search";
+        return "/database/user_search";
     }
 
 }

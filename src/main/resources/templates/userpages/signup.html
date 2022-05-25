@@ -16,10 +16,9 @@
     <div class="container py-4">
         <header class="pb-3 mb-4 border-bottom border-primary text-dark">
             <!-- header title *Doesn't need to be here if doesn't fit form layout*-->
-            <span class="fs-4">Signup</span>
+            <span class="fs-4">Sign In</span>
         </header>
 
-        <!-- Put form content here sarah :) -->
         <div>
             <br>
             <br>
@@ -39,24 +38,40 @@
 
 
                 <div class="main" style="width:100%; margin-top:-60px;">
-                    <form action="#" th:action="@{/signup}" class="form1" method="POST">
-                        <table>
-                            <tr>
-                                <td>Name:</td>
-                                <td><input type="text" placeholder="Username" class="un"/></td>
-                                <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</td>
-                            </tr>
-                            <tr>
-                                <td>Password:</td>
-                                <td><input type="password" placeholder="Password" class="pass"/></td>
-                                <td th:if="${#fields.hasErrors('password')}" th:errors="*{email}">EMail Error</td>
-                            </tr>
 
-                            <tr>
-                                <td><button class="submit" type="submit">Sign Up</button></td>
-                            </tr>
-                        </table>
+                    <form class="form1" action="#" th:action="@{/database/usercreate}" th:object="${user}" method="POST">
+                            <label for="email">Email:</label>
+                            <input class="un" type="email" th:field="*{email}" id="email">
+                            <small th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</small>
+                            <label for="password">Password:</label>
+                            <input class="un" type="password" th:field="*{password}" id="password">
+                            <small th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</small>
+                            <label for="name">Name:</label>
+                            <input class="un" type="text" th:field="*{name}" id="name">
+                            <small th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</small>
+                            <label for="dob">Birth Date:</label>
+                            <input class="un" type="date" th:field="*{dob}" id="dob">
+                            <small th:if="${#fields.hasErrors('dob')}" th:errors="*{dob}">Birth Date Error</small>
+                        <button class="submit" type="submit">Add</button>
                     </form>
+                    <!--
+                    <form class="form1" name="f" th:action="@{/login}" method="POST" style="padding:100px;">
+                        <table style="width:100%">
+                            <tr th:if="${param.error}" class="alert alert-error">
+                                Invalid email and password.
+                            </tr>
+                            <tr th:if="${param.logout}" class="alert alert-success">
+                                You have been logged out.
+                            </tr>
+                            <tr><th><label for="username">Email</label></th></tr>
+                            <tr><td><input class="un" type="email" id='username' placeholder="Email" name="username" size="20" required></td></tr>
+                            <tr><th><label for="password">Password</label></th></tr>
+                            <tr><td><input class="pass" type="password" id="password" placeholder="Password" name="password" size="20" required></td></tr>
+                            <tr><th><input class="submit" type="submit" value="Submit"></th></tr>
+                            <tr><td><p class="signup" align="center">Don't have an account? Sign Up <a th:href="@{/database/usercreate}">here</a></p></td></tr>
+
+                        </table>
+                    </form>-->
 
 
                 </div>
