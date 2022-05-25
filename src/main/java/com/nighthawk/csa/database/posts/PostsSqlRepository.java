@@ -12,7 +12,8 @@ import java.util.List;
 @Transactional
 public class PostsSqlRepository {
     @Autowired
-    private UserJpaRepository jpa;
+    private PostsJpaRepository jpa;
+    private UserJpaRepository userjpa;
 
     public  List<Posts>listAll() {
         return jpa.findAll();
@@ -23,7 +24,7 @@ public class PostsSqlRepository {
     }
 
     public User get(long id) {
-        return jpa.findById(id).get();
+        return userjpa.findById(id).get();
     }
 
     public void delete(long id) {
