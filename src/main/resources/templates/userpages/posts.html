@@ -19,11 +19,26 @@
             <span class="fs-4">Recent Posts:</span>
         </header>
 
-        <!-- Connect with database backend of posts, can be similar to backend of old project theSmack. Posts can be saved individually and linked to an account(admin) -->
+        <div class="container py-4 text-light bg-success">
 
+            <h2>Post Test Viewer</h2>
+            <div class="row align-items-md-stretch">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Posts</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="posts : ${list}">
+                        <td th:text="${posts.id}">Person ID</td>
+                        <td th:text="${person.name}">Name</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
 
-
-        <div id="container" class="container py-4">
         </div>
 
     </div>

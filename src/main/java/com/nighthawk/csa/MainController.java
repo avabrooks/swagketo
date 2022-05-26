@@ -6,10 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MainController {
 
-    @GetMapping("/posts")
-    public String posts() {
-        return "/userpages/posts";
-    }
 
     @GetMapping("/clubs")
     public String clubs() {
@@ -51,6 +47,10 @@ public class MainController {
     public String risa() {
         return "/aboutus/risa";
     }
-
+   
+    @GetMapping("/requirements")
+    public String requirements() {
+        return "/services/requirements";
+    }
 }
 
