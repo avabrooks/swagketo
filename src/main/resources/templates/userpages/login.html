@@ -39,6 +39,7 @@
 
 
             <div class="main" style="width:100%; margin-top:-60px;">
+                <!--
                 <form class="form1" th:action="@{/signup}" method="GET" >
                     <div>
                         <input class="un" type="text" align="center" placeholder="Username">
@@ -49,6 +50,24 @@
                     </div>
 
 
+                </form> -->
+                <form class="form1" name="f" th:action="@{/login}" method="POST" style="padding:100px;">
+                    <table style="width:100%">
+                        <tr th:if="${param.error}" class="alert alert-error">
+                            Invalid email and password.
+                        </tr>
+                        <tr th:if="${param.logout}" class="alert alert-success">
+                            You have been logged out.
+                        </tr>
+                        <!-- 'email' is mapped to 'username' for Spring Security -->
+                        <tr><th><label for="username">Email</label></th></tr>
+                        <tr><td><input class="un" type="email" id='username' placeholder="Email" name="username" size="20" required></td></tr>
+                        <tr><th><label for="password">Password</label></th></tr>
+                        <tr><td><input class="pass" type="password" id="password" placeholder="Password" name="password" size="20" required></td></tr>
+                        <tr><th><input class="submit" type="submit" value="Submit"></th></tr>
+                        <tr><td><p class="signup" align="center">Don't have an account? Sign Up <a th:href="@{/database/usercreate}">here</a></p></td></tr>
+
+                    </table>
                 </form>
 
 

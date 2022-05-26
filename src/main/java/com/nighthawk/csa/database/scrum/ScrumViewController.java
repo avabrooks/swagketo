@@ -1,6 +1,8 @@
 package com.nighthawk.csa.database.scrum;
 
-import com.nighthawk.csa.database.person.PersonSqlRepository;
+import com.nighthawk.csa.database.ModelRepository;
+import com.nighthawk.csa.database.scrum.Scrum;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,18 +17,16 @@ import javax.validation.Valid;
 
 // Built using video: https://www.youtube.com/watch?v=ctwRpskAeIU
 @Controller
-public class ScrumController implements WebMvcConfigurer {
+public class ScrumViewController {
 
     @Autowired
-    private ScrumSqlRepository scrumSqlRepository;
+    private ModelRepository modelRepository;
 
-    @Autowired
-    private PersonSqlRepository personSqlRepository;
 
     @GetMapping("/database/scrum")
     public String scrumTeam(Model model) {
-        model.addAttribute("list", scrumSqlRepository.listAll());
-        return "database/scrum";
+        model.addAttribute("list", modelRepository.listAllScrums());
+        return "mvc/database/scrum";
     }
 
     /*  The HTML template Forms and Model attributes are bound
@@ -36,16 +36,16 @@ public class ScrumController implements WebMvcConfigurer {
     @GetMapping("/database/scrum_create")
     public String scrumTeamCreate(Model model) {
         model.addAttribute("scrum", new Scrum());
-        model.addAttribute("listPersons", personSqlRepository.listAll());
-        return "database/scrum_form";
+        model.addAttribute("listPersons", modelRepository.listAll());
+        return "mvc/database/scrum_form";
     }
 
     @GetMapping("/database/scrum_update/{id}")
     public String scrumTeamUpdate(@PathVariable("id") int id, Model model) {
         model.addAttribute("id", id);  //passed to support using one form
-        model.addAttribute("scrum", scrumSqlRepository.get(id));
-        model.addAttribute("listPersons", personSqlRepository.listAll());
-        return "database/scrum_form";
+        model.addAttribute("scrum", modelRepository.getScrum(id));
+        model.addAttribute("listPersons", modelRepository.listAll());
+        return "mvc/database/scrum_form";
     }
 
     /* Gathers the attributes filled out in the form, tests for and retrieves validation error
@@ -56,16 +56,16 @@ public class ScrumController implements WebMvcConfigurer {
     public String saveData(@Valid Scrum scrum, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
         // Validation of Family attributes, validation of nested object supported
         if (bindingResult.hasErrors()) {
-            return "database/scrum_form";
+            return "mvc/database/scrum_form";
         }
         // Redirect to next step
-        scrumSqlRepository.save(scrum);
+        modelRepository.saveScrum(scrum);
         return "redirect:/database/scrum";
     }
 
     @GetMapping("/database/scrum_delete/{id}")
-    public String familyDelete(@PathVariable("id") long id) {
-        scrumSqlRepository.delete(id);
+    public String scrumDelete(@PathVariable("id") long id) {
+        modelRepository.deleteScrum(id);
         return "redirect:/database/scrum";
     }
 }
