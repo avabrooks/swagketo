@@ -37,7 +37,7 @@ public class ModelRepository implements UserDetailsService {  // "implements" ti
     @Autowired  // Inject RoleJpaRepository
     private RoleJpaRepository roleJpaRepository;
     @Autowired  // Inject RoleJpaRepository
-    private ScrumJpaRepository scrumJpaRepository;
+    private PostsJpaRepository PostsJpaRepository;
 
     // Setup Password style for Database storing and lookup
     @Autowired  // Inject PasswordEncoder
@@ -120,6 +120,7 @@ public class ModelRepository implements UserDetailsService {  // "implements" ti
     }
 
     public  List<Role>listAllRoles() {
+
         return roleJpaRepository.findAll();
     }
 
@@ -149,8 +150,21 @@ public class ModelRepository implements UserDetailsService {  // "implements" ti
 
 
     public List<Posts> listAllPosts() {
-        return PostsJpaRepository.findAll();
+        return PostsJpaRepository.findAllByOrderByNameAsc();
     }
+
+    /*
+    // custom query to find anything containing term in name or email ignoring case
+    public  List<Posts>listLike(String term) {
+        return PostsJpaRepository.findByNameContainingIgnoreCaseOrEmailContainingIgnoreCase(term, term);
+    }
+
+    // custom query to find anything containing term in name or email ignoring case
+    public  List<Posts>listLikeNative(String term) {
+        String like_term = String.format("%%%s%%",term);  // Like required % rappers
+        return PostsJpaRepository.findByLikeTermNative(like_term);
+    }
+    */
 
 
 
