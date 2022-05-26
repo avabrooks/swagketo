@@ -1,11 +1,14 @@
 package com.nighthawk.csa.database;
 
+import com.nighthawk.csa.database.posts.Posts;
 import com.nighthawk.csa.database.role.Role;
 import com.nighthawk.csa.database.role.RoleJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 @Component // Scans Application for ModelInit Bean, this detects CommandLineRunner
 public class ModelInit {
@@ -28,3 +31,4 @@ public class ModelInit {
         };
     }
 }
+
