@@ -48,5 +48,9 @@ public class MainController {
         return "/aboutus/risa";
     }
 
+    @GetMapping("/requirements")
+    public String requirements() {
+        return "/services/requirements";
+    }
 }
 
