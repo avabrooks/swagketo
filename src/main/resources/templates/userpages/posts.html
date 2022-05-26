@@ -21,8 +21,7 @@
 
         <div class="container py-4 text-light bg-success">
 
-            <h2>Person Viewer</h2>
-            <a th:href="@{/database/personcreate/}">Create Person</a>
+            <h2>Post Test Viewer</h2>
             <div class="row align-items-md-stretch">
                 <table class="table">
                     <thead>
@@ -32,17 +31,9 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr th:each="person : ${list}">
-                        <td th:text="${person.id}">Person ID</td>
-                        <td th:text="${person.email}">Birth Date</td>
+                    <tr th:each="posts : ${list}">
+                        <td th:text="${posts.id}">Person ID</td>
                         <td th:text="${person.name}">Name</td>
-                        <td th:if="${person.getAge() != -1}" th:text="${person.getAge()}">Age</td>
-                        <td th:unless="${person.getAge() != -1}" th:text="Unknown">Unknown Age</td>
-                        <td>
-                            <a th:href="@{/database/notes/{id}(id = ${person.id})}">Notes</a>
-                            <a th:href="@{/database/personupdate/{id}(id = ${person.id})}">Update</a>
-                            <a th:href="@{/database/persondelete/{id}(id = ${person.id})}">Delete</a>
-                        </td>
                     </tr>
                     </tbody>
                 </table>
