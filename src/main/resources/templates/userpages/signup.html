@@ -37,47 +37,37 @@
             <div style="width:100%;display:grid;grid-template-columns: 3fr 2fr;">
 
 
-                <div class="main" style="width:100%; margin-top:-60px;">
+                <div class="main" style="width:100%; margin-top:-60px; height:100%;">
 
                     <form class="form1" action="#" th:action="@{/database/usercreate}" th:object="${user}" method="POST">
-                            <label for="email">Email:</label>
-                            <input class="un" type="email" th:field="*{email}" id="email">
-                            <small th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</small>
-                            <label for="password">Password:</label>
-                            <input class="un" type="password" th:field="*{password}" id="password">
-                            <small th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</small>
-                            <label for="name">Name:</label>
-                            <input class="un" type="text" th:field="*{name}" id="name">
-                            <small th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</small>
-                            <label for="dob">Birth Date:</label>
-                            <input class="un" type="date" th:field="*{dob}" id="dob">
-                            <small th:if="${#fields.hasErrors('dob')}" th:errors="*{dob}">Birth Date Error</small>
-                        <button class="submit" type="submit">Add</button>
-                    </form>
-                    <!--
-                    <form class="form1" name="f" th:action="@{/login}" method="POST" style="padding:100px;">
-                        <table style="width:100%">
-                            <tr th:if="${param.error}" class="alert alert-error">
-                                Invalid email and password.
-                            </tr>
-                            <tr th:if="${param.logout}" class="alert alert-success">
-                                You have been logged out.
-                            </tr>
-                            <tr><th><label for="username">Email</label></th></tr>
-                            <tr><td><input class="un" type="email" id='username' placeholder="Email" name="username" size="20" required></td></tr>
-                            <tr><th><label for="password">Password</label></th></tr>
-                            <tr><td><input class="pass" type="password" id="password" placeholder="Password" name="password" size="20" required></td></tr>
-                            <tr><th><input class="submit" type="submit" value="Submit"></th></tr>
-                            <tr><td><p class="signup" align="center">Don't have an account? Sign Up <a th:href="@{/database/usercreate}">here</a></p></td></tr>
+                        <table style="width:100%; text-align:center;">
+                            <tr><th><label for="email">Email:</label></th></tr>
+                            <tr><td><input class="un" style="margin-left:0px;" type="email" th:field="*{email}" id="email"></td></tr>
+                            <tr><td><small th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</small></td></tr>
+
+                            <tr><th><label for="password">Password:</label></th></tr>
+                            <tr><td><input class="un" style="margin-left:0px;" type="password" th:field="*{password}" id="password"></td></tr>
+                            <tr><td><small th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</small></td></tr>
+
+                            <tr><th><label for="name">Name:</label></th></tr>
+                            <tr><td><input class="un" style="margin-left:0px;" type="text" th:field="*{name}" id="name"></td></tr>
+                            <tr><td>  <small th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</small></td></tr>
+
+                            <tr><th><label for="dob">Birth Date:</label></th></tr>
+                            <tr><td><input class="un" style="margin-left:0px;" type="date" th:field="*{dob}" id="dob"></td></tr>
+                            <tr><td><small th:if="${#fields.hasErrors('dob')}" th:errors="*{dob}">Birth Date Error</small></td></tr>
+
 
                         </table>
-                    </form>-->
+                        <button class="submit" type="submit">Add</button>
+                    </form>
 
 
                 </div>
                 <div style="width:40%;">
                     <img style="width:150%; margin-left:100px;" src="images/web-linkdn.png" alt="" class="linkdn">
                 </div>
+
             </div>
 
             </body>
@@ -86,10 +76,6 @@
 
         </div>
 
-
-
-        <div id="container" class="container py-4">
-        </div>
 
     </div>
 </th:block>
