@@ -48,7 +48,7 @@ public class UserViewController {
         repository.save(user);
         repository.addRoleToUser(user.getEmail(), "ROLE_STUDENT");
         // Redirect to next step
-        return "redirect:/database/user";
+        return "redirect:/profile";
     }
 
     @GetMapping("/database/userupdate/{id}")

@@ -19,7 +19,7 @@ public class PostsSqlMvcController {
 
     @GetMapping("/posts")
     public String posts(Model model) {
-        List<Posts> list = repository.listallPosts();
+        List<Posts> list = repository.listAllPosts();
         model.addAttribute("list", list);
         return "/userpages/posts";
     }
