@@ -24,7 +24,7 @@ public class MainController {
     // test
     @GetMapping("/profile")
     public String profileTest() {
-        return "/userpages/profile_admin";
+        return "/userpages/profile";
     }
 
     @GetMapping("/login")
