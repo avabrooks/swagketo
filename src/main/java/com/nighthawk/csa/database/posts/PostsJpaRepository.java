@@ -1,6 +1,6 @@
 package com.nighthawk.csa.database.posts;
 
-import com.nighthawk.csa.database.posts.Posts
+import com.nighthawk.csa.database.posts.Posts;
 import com.nighthawk.csa.database.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
