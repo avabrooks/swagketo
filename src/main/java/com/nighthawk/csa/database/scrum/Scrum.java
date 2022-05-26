@@ -2,7 +2,7 @@ package com.nighthawk.csa.database.scrum;
 
 // https://projectlombok.org/features/all
 
-import com.nighthawk.csa.database.person.Person;
+import com.nighthawk.csa.database.user.User;
 import lombok.*;
 
 import javax.persistence.*;
@@ -31,21 +31,21 @@ public class Scrum {
      */
     @OneToOne
     @JoinColumn(name = "primary_id")    //foreign key is stored in table
-    private Person primary;
+    private User primary;
 
     @OneToOne
     @JoinColumn(name = "member1_id")
-    private Person member1;
+    private User member1;
 
     @OneToOne
     @JoinColumn(name = "member2_id")
-    private Person member2;
+    private User member2;
 
     @OneToOne
     @JoinColumn(name = "member3_id")
-    private Person member3;
+    private User member3;
 
     @OneToOne
     @JoinColumn(name = "member4_id")
-    public Person member4;
+    public User member4;
 }
