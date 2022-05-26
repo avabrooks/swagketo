@@ -4,8 +4,9 @@ import com.nighthawk.csa.database.user.User;
 import com.nighthawk.csa.database.user.UserJpaRepository;
 import com.nighthawk.csa.database.role.Role;
 import com.nighthawk.csa.database.role.RoleJpaRepository;
-import com.nighthawk.csa.database.scrum.Scrum;
 import com.nighthawk.csa.database.scrum.ScrumJpaRepository;
+import com.nighthawk.csa.database.posts.Posts;
+import com.nighthawk.csa.database.posts.PostsJpaRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -93,10 +94,6 @@ public class ModelRepository implements UserDetailsService {  // "implements" ti
         return (UserJpaRepository.findByEmail(email));
     }
 
-    public void delete(long id) {
-        deleteScrumMember(id);   // make sure ID is no longer present in SCRUM Teams
-        UserJpaRepository.deleteById(id);
-    }
 
     public void defaults(String password, String roleName) {
         for (User user: listAll()) {
@@ -150,41 +147,13 @@ public class ModelRepository implements UserDetailsService {  // "implements" ti
 
     /* Scrum Section */
 
-    public void saveScrum(Scrum scrum) {
-        scrumJpaRepository.save(scrum);
+
+    public List<Posts> listallPosts() {
+        return PostsJpaRepository.findAllByOrderByNameAsc();
     }
 
-    public List<Scrum> listAllScrums() {
-        return scrumJpaRepository.findAllByOrderByNameAsc();
-    }
 
-    public Scrum getScrum(long id) {
-        return (scrumJpaRepository.findById(id).isPresent())
-                ? scrumJpaRepository.findById(id).get()
-                : null;
-    }
 
-    public void deleteScrum(long id) {
-        scrumJpaRepository.deleteById(id);
-    }
 
-    private boolean is_deletedScrum(User p, long id) {
-        return (p != null && p.getId() == id );
-    }
-
-    public void deleteScrumMember(long id) {
-        List<Scrum> scrum_list = scrumJpaRepository.findAll();
-        for (Scrum scrum: scrum_list) {
-            boolean changed = false;
-            if (is_deletedScrum(scrum.getPrimary(), id)) {scrum.setPrimary(null); changed = true;}
-            if (is_deletedScrum(scrum.getMember1(), id)) {scrum.setMember1(null); changed = true;}
-            if (is_deletedScrum(scrum.getMember2(), id)) {scrum.setMember2(null); changed = true;}
-            if (is_deletedScrum(scrum.getMember3(), id)) {scrum.setMember3(null); changed = true;}
-            if (is_deletedScrum(scrum.getMember4(), id)) {scrum.setMember4(null); changed = true;}
-            if (changed) {
-                scrumJpaRepository.save(scrum);}
-        }
-
-    }
 
 }
