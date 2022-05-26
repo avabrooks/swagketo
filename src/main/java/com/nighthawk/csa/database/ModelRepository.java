@@ -148,8 +148,8 @@ public class ModelRepository implements UserDetailsService {  // "implements" ti
     /* Scrum Section */
 
 
-    public List<Posts> listallPosts() {
-        return PostsJpaRepository.findAllByOrderByNameAsc();
+    public List<Posts> listAllPosts() {
+        return PostsJpaRepository.findAll();
     }
 
 
