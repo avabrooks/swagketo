@@ -17,7 +17,7 @@ public class PostsSqlMvcController {
     @Autowired
     private ModelRepository repository;
 
-    @GetMapping("/posts")
+    @GetMapping("/allposts")
     public String posts(Model model) {
         List<Posts> list = repository.listAllPosts();
         model.addAttribute("list", list);

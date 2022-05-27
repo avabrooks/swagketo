@@ -16,22 +16,22 @@
     <div class="container py-4">
         <header class="pb-3 mb-4 border-bottom border-primary text-dark">
             <!-- header title-->
-            <span class="fs-4">Recent Posts:</span>
+            <span class="fs-4">All Posts:</span>
         </header>
 
-        <div class="container py-4 text-light bg-success">
+        <div>
             <div class="row align-items-md-stretch">
                 <table class="table">
                     <thead>
                     <tr>
                         <th>User</th>
-                        <th>Posts</th>
+                        <th>Post Content</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr th:each="posts : ${list}">
-                        <td th:text="${posts.name}">Name</td>
-                        <td th:text="${posts.message}">Post Content</td>
+                        <td th:text="${posts.name}"></td>
+                        <td th:text="${posts.message}"></td>
                     </tr>
                     </tbody>
                 </table>
