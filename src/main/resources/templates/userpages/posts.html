@@ -20,8 +20,6 @@
         </header>
 
         <div class="container py-4 text-light bg-success">
-
-            <h2>Post Test Viewer</h2>
             <div class="row align-items-md-stretch">
                 <table class="table">
                     <thead>
@@ -32,8 +30,8 @@
                     </thead>
                     <tbody>
                     <tr th:each="posts : ${list}">
-                        <td th:text="${posts.id}">Person ID</td>
-                        <td th:text="${person.name}">Name</td>
+                        <td th:text="${posts.name}">Name</td>
+                        <td th:text="${posts.message}">Post Content</td>
                     </tr>
                     </tbody>
                 </table>

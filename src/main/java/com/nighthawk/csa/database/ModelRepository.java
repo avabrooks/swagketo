@@ -194,7 +194,7 @@ public class ModelRepository implements UserDetailsService {  // "implements" ti
 
     /* posts section */
     public List<Posts> listAllPosts() {
-        return PostsJpaRepository.findAllByOrderByNameAsc();
+        return PostsJpaRepository.findAll();
     }
 
     /*

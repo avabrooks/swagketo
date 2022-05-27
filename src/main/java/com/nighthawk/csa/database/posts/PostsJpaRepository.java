@@ -9,7 +9,7 @@ import java.util.List;
 public interface PostsJpaRepository extends JpaRepository<Posts, Long>{
     //Posts findByEmail(String email);
 
-    List<Posts> findAllByOrderByNameAsc();
+    List<Posts> findAll();
 
 
    // List<Posts> findByNameContainingIgnoreCaseOrEmailContainingIgnoreCase(String name, String email);
