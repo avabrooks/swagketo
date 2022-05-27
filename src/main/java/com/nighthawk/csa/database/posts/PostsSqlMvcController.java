@@ -23,4 +23,9 @@ public class PostsSqlMvcController {
         model.addAttribute("list", list);
         return "/userpages/posts";
     }
+
+    @GetMapping("/createpost")
+    public String createpost(){
+        return "/userpages/createpost";
+    }
 }

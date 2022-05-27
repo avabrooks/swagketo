@@ -1,10 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml" xmlns=""
+      layout:decorate="~{layout}" lang="en">
 
-</body>
+<!-- <head> -->
+<th:block layout:fragment="head" th:remove="tag">
+    <title>LinkDN</title>
+</th:block>
+
+
+
+<th:block layout:fragment="body" th:remove="tag">
+    <div class="container">
+
+
+
+
+    </div>
+
+
+
+</th:block>
+
+
 </html>
