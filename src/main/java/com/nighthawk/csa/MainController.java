@@ -46,20 +46,9 @@ public class MainController {
                             @RequestParam(name = "desired", required = false, defaultValue = "0") double desired,
                             @RequestParam(name = "percent", required = false, defaultValue = "0") double percent,
                             Model model) {
-
         double weight = percent / 100;
-
-//        System.out.println("current: " + current);
-//        System.out.println("desired: " + desired);
-//        System.out.println("percent: " + percent);
-//        System.out.println("weight: " + weight);
-//        System.out.println((desired - ((1 - weight) * current)) / weight);
-
         double requiredGrade = (desired - ((1 - weight) * current)) / weight;
-
-
         model.addAttribute("output", Math.round(requiredGrade * 100.0) / 100.0);
-
         return "/services/gradecalc";
     }
 
