@@ -1,17 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        p {
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml" xmlns=""
+      layout:decorate="~{layout}" lang="en">
+
+<!-- <head> -->
+<th:block layout:fragment="head" th:remove="tag">
+    <title>LinkDN</title>
+
+    <style th:inline="css">
+        .className {
             font-size: 20px;
         }
-
-        .container {
+        .bar-div {
             background-color: rgb(192, 192, 192);
-            width: 80%;
+            width: 100%;
             border-radius: 15px;
         }
-
         .skill {
             background-color: rgb(116, 194, 92);
             color: white;
@@ -20,27 +26,42 @@
             font-size: 20px;
             border-radius: 15px;
         }
-
         .html {
             width: 80%;
         }
-
         .php {
-            width: 60%;
+            /*width: 60%;*/
         }
     </style>
-</head>
-<body>
-<h1>Requirements</h1>
-<p>English</p>
-<div class="container">
-    <div class="skill html">80%</div>
-</div>
 
-<p>Math</p>
-<div class="container">
-    <div class="skill php">60%</div>
-</div>
-</body>
+</th:block>
+
+<th:block layout:fragment="body" th:remove="tag">
+    <div class="container py-4">
+        <div class="mx-sm-3 mb-5">
+            <h1>Requirements</h1>
+            <p class="className mb-2">English</p>
+            <div class="bar-div">
+                <div th:style="'width:' + ${english} + '%'" class="skill php" th:text="${english} + '%'"></div>
+            </div>
+            <p class="className mb-2">Math</p>
+            <div class="bar-div">
+                <div th:style="'width:' + ${math} + '%'" class="skill php" th:text="${math} + '%'"></div>
+            </div>
+        </div>
+
+        <form class="form-inline" role="form" action="/requirements">
+            <div class="row justify-content-md-center">
+                <div class="form-group mb-3">
+                    <input type="number" class="form-control" id="english" name="english" placeholder="enter english credits completed">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="number" class="form-control" id="math" name="math" placeholder="enter math credits completed">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2 w-50">Submit</button>
+            </div>
+        </form>
+    </div>
+</th:block>
 
 </html>

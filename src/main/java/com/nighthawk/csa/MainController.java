@@ -58,7 +58,12 @@ public class MainController {
     }
    
     @GetMapping("/requirements")
-    public String requirements() {
+    public String requirements(
+            @RequestParam(name = "english", required = false, defaultValue = "0") double english,
+            @RequestParam(name = "math", required = false, defaultValue = "0") double math,
+                               Model model) {
+        model.addAttribute("english", english / 40 * 100);
+        model.addAttribute("math", math / 20 * 100);
         return "/services/requirements";
     }
 }
