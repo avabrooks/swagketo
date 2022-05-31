@@ -15,6 +15,13 @@
 <th:block layout:fragment="body" th:remove="tag">
     <div class="container">
 
+        <form class="form-inline" action="#" th:action="@{/createpost}" th:object="${posts}" method="POST">
+            <input type="text" th:field="*{name}" id="name" name="name" placeholder="Enter Name" required>
+            <input type="text" th:field="*{message}" id="message" name="message" placeholder="Enter Message" required>
+
+            <button type="submit" class="btn btn-primary">Post</button>
+        </form>
+
 
 
 
