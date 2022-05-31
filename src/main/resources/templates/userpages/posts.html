@@ -44,6 +44,7 @@
                 <div th:each="posts : ${list}" class="card" style="width: 18rem;">
                     <div class="card-body">
                         <h5 th:text="${posts.name}"></h5>
+                        <!--h6 th:text="${posts.role}"--></h6>
                         <p th:text="${posts.message}"></p>
 
                     </div>
