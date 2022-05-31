@@ -48,6 +48,50 @@
             <div class="bar-div">
                 <div th:style="'width:' + ${math} + '%'" class="skill php" th:text="${math} + '%'"></div>
             </div>
+            <p class="className mb-2">Physical Education</p>
+            <div class="bar-div">
+                <div th:style="'width:' + ${pe} + '%'" class="skill php" th:text="${pe} + '%'"></div>
+            </div>
+            <p class="className mb-2">Civics</p>
+            <div class="bar-div">
+                <div th:style="'width:' + ${civics} + '%'" class="skill php" th:text="${civics} + '%'"></div>
+            </div>
+            <p class="className mb-2">Economics</p>
+            <div class="bar-div">
+                <div th:style="'width:' + ${econ} + '%'" class="skill php" th:text="${econ} + '%'"></div>
+            </div>
+            <p class="className mb-2">Elective</p>
+            <div class="bar-div">
+                <div th:style="'width:' + ${elective} + '%'" class="skill php" th:text="${elective} + '%'"></div>
+            </div>
+            <p class="className mb-2">Fine Arts / Foreign Language</p>
+            <div class="bar-div">
+                <div th:style="'width:' + ${fafl} + '%'" class="skill php" th:text="${fafl} + '%'"></div>
+            </div>
+            <p class="className mb-2">Fine Arts</p>
+            <div class="bar-div">
+                <div th:style="'width:' + ${art} + '%'" class="skill php" th:text="${art} + '%'"></div>
+            </div>
+            <p class="className mb-2">Health</p>
+            <div class="bar-div">
+                <div th:style="'width:' + ${health} + '%'" class="skill php" th:text="${health} + '%'"></div>
+            </div>
+            <p class="className mb-2">Life Science</p>
+            <div class="bar-div">
+                <div th:style="'width:' + ${lifescience} + '%'" class="skill php" th:text="${lifescience} + '%'"></div>
+            </div>
+            <p class="className mb-2">Physical Science</p>
+            <div class="bar-div">
+                <div th:style="'width:' + ${physicalscience} + '%'" class="skill php" th:text="${physicalscience} + '%'"></div>
+            </div>
+            <p class="className mb-2">US History</p>
+            <div class="bar-div">
+                <div th:style="'width:' + ${ushistory} + '%'" class="skill php" th:text="${ushistory} + '%'"></div>
+            </div>
+            <p class="className mb-2">World History</p>
+            <div class="bar-div">
+                <div th:style="'width:' + ${whistory} + '%'" class="skill php" th:text="${whistory} + '%'"></div>
+            </div>
         </div>
 
         <form class="form-inline" role="form" action="/requirements">
@@ -57,6 +101,39 @@
                 </div>
                 <div class="form-group mb-3">
                     <input type="number" class="form-control" id="math" name="math" placeholder="enter math credits completed">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="number" class="form-control" id="pe" name="pe" placeholder="enter physical education credits completed">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="number" class="form-control" id="civics" name="civics" placeholder="enter civics credits completed">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="number" class="form-control" id="econ" name="econ" placeholder="enter economics credits completed">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="number" class="form-control" id="elective" name="elective" placeholder="enter elective credits completed">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="number" class="form-control" id="fafl" name="fafl" placeholder="enter foreign language or fine arts credits completed">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="number" class="form-control" id="art" name="art" placeholder="enter fine art credits completed">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="number" class="form-control" id="health" name="health" placeholder="enter health credits completed">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="number" class="form-control" id="lifescience" name="lifescience" placeholder="enter life science credits completed">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="number" class="form-control" id="physicalscience" name="physicalscience" placeholder="enter physical science credits completed">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="number" class="form-control" id="ushistory" name="ushistory" placeholder="enter US history credits completed">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="number" class="form-control" id="whistory" name="whistory" placeholder="enter world history credits completed">
                 </div>
                 <button type="submit" class="btn btn-primary mb-2 w-50">Submit</button>
             </div>
