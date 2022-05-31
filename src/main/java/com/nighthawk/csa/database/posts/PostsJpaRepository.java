@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface PostsJpaRepository extends JpaRepository<Posts, Long>{
 
+    Posts findByMessage(String message);
+
     List<Posts> findAll();
 
     List<Posts> findByNameContainingIgnoreCaseOrMessageContainingIgnoreCase(String name, String message);
