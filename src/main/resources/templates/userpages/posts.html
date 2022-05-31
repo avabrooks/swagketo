@@ -20,6 +20,21 @@
         </header>
 
         <div>
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <label for="term">Search</label>
+                            <input type="text" class="form-control" id="term" placeholder="Enter Term">
+                            <label></label> <!-- used for spacer -->
+                        </div>
+                        <button class="btn btn-primary bg-secondary" onclick="search_data();">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
             <div class="row align-items-md-stretch">
                 <table class="table">
                     <thead>
@@ -40,6 +55,55 @@
         </div>
 
     </div>
+
+    <script>
+        function search_data() {
+            // fetch standard requires database set to a name-value pair
+            const term = document.getElementById("term");
+            const body = {
+                term: term.value,
+                foo: "bar"
+            };
+
+            // fetch call with header options
+            fetch('/api/person/search', {
+                method: "POST",
+                credentials: "include",
+                body: JSON.stringify(body),
+                cache: "no-cache",
+                headers: new Headers({
+                    "content-type": "application/json"
+                })
+            })
+                // async then replies with response header
+                .then(function (response) {
+                    // prepare HTML search result container for new output
+                    const resultContainer = document.getElementById("result");
+                    // clean up from previous search
+                    while (resultContainer.firstChild) {
+                        resultContainer.removeChild(resultContainer.firstChild);
+                    }
+                    // trap error response from Web API
+                    if (response.status !== 200) {
+                        const errorMsg = 'Database response error: ' + response.status;
+                        console.log(errorMsg);
+                        const div = document.createElement("div");
+                        div.innerHTML = errorMsg;
+                        resultContainer.appendChild(div);
+                        return;
+                    }
+                    // response contains valid result
+                    response.json().then(function(data) {
+                        // loop through JSON and build HTML output
+                        for (let i = 0; i < data.length; i++) {
+                            const div = document.createElement("div");
+                            div.innerHTML = data[i].name + ' ' + data[i].email;
+                            resultContainer.appendChild(div);
+                        }
+                    })
+                })
+        }
+    </script>
 </th:block>
 
 </html>

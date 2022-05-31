@@ -72,16 +72,7 @@ public class ModelRepository implements UserDetailsService {  // "implements" ti
         return UserJpaRepository.findAllByOrderByNameAsc();
     }
 
-    // custom query to find anything containing term in name or email ignoring case
-    public  List<User>listLike(String term) {
-        return UserJpaRepository.findByNameContainingIgnoreCaseOrEmailContainingIgnoreCase(term, term);
-    }
 
-    // custom query to find anything containing term in name or email ignoring case
-    public  List<User>listLikeNative(String term) {
-        String like_term = String.format("%%%s%%",term);  // Like required % rappers
-        return UserJpaRepository.findByLikeTermNative(like_term);
-    }
 
     public void save(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
@@ -197,17 +188,16 @@ public class ModelRepository implements UserDetailsService {  // "implements" ti
         return PostsJpaRepository.findAll();
     }
 
-    /*
-    // custom query to find anything containing term in name or email ignoring case
+    // custom query to find anything containing term in name or message ignoring case
     public  List<Posts>listLike(String term) {
-        return PostsJpaRepository.findByNameContainingIgnoreCaseOrEmailContainingIgnoreCase(term, term);
+        return PostsJpaRepository.findByNameContainingIgnoreCaseOrMessageContainingIgnoreCase(term, term);
     }
 
-    // custom query to find anything containing term in name or email ignoring case
+    // custom query to find anything containing term in name or message ignoring case
     public  List<Posts>listLikeNative(String term) {
         String like_term = String.format("%%%s%%",term);  // Like required % rappers
         return PostsJpaRepository.findByLikeTermNative(like_term);
     }
-    */
+
 
 }

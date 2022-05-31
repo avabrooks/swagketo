@@ -72,20 +72,5 @@ public class UserApiController {
         return new ResponseEntity<>(email +" is created successfully", HttpStatus.CREATED);
     }
 
-    /*
-    The personSearch API looks across database for partial match to term (k,v) passed by RequestEntity body
-     */
-    @PostMapping(value = "/search", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Object> userSearch(RequestEntity<Object> request) {
 
-        // extract term from RequestEntity
-        JSONObject json = new JSONObject((Map) Objects.requireNonNull(request.getBody()));
-        String term = (String) json.get("term");
-
-        // custom JPA query to filter on term
-        List<User> list = repository.listLikeNative(term);
-
-        // return resulting list and status, error checking should be added
-        return new ResponseEntity<>(list, HttpStatus.OK);
-    }
 }
