@@ -1,15 +1,13 @@
 package com.nighthawk.csa.database;
 
 import com.nighthawk.csa.database.posts.Posts;
-import com.nighthawk.csa.database.user.User;
-import com.nighthawk.csa.database.user.UserJpaRepository;
+import com.nighthawk.csa.database.posts.PostsJpaRepository;
 import com.nighthawk.csa.database.role.Role;
 import com.nighthawk.csa.database.role.RoleJpaRepository;
 import com.nighthawk.csa.database.scrum.Scrum;
 import com.nighthawk.csa.database.scrum.ScrumJpaRepository;
-import com.nighthawk.csa.database.posts.Posts;
-import com.nighthawk.csa.database.posts.PostsJpaRepository;
-
+import com.nighthawk.csa.database.user.User;
+import com.nighthawk.csa.database.user.UserJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -188,6 +186,10 @@ public class ModelRepository implements UserDetailsService {  // "implements" ti
     /* posts section */
     public List<Posts> listAllPosts() {
         return PostsJpaRepository.findAll();
+    }
+
+    public void save(Posts posts) {
+        PostsJpaRepository.save(posts);
     }
 
     // custom query to find anything containing term in name or message ignoring case
