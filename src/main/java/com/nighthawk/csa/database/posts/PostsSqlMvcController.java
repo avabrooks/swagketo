@@ -25,7 +25,16 @@ public class PostsSqlMvcController {
     }
 
     @GetMapping("/createpost")
-    public String createpost(){
+    public String createpost(Posts posts) {
         return "/userpages/createpost";
+    }
+
+    @PostMapping("/createpost")
+    public String postSave(@Valid Posts posts, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return "userpages/createpost";
+        }
+        repository.save(posts);
+        return "redirect:/userpages/allposts";
     }
 }
