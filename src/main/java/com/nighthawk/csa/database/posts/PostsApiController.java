@@ -17,7 +17,7 @@ import java.util.*;
 import java.text.SimpleDateFormat;
 
 @RestController
-@RequestMapping("/allposts")
+@RequestMapping("/api/allposts")
 public class PostsApiController {
 
     @Autowired
