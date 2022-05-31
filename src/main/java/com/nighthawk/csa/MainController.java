@@ -61,9 +61,31 @@ public class MainController {
     public String requirements(
             @RequestParam(name = "english", required = false, defaultValue = "0") double english,
             @RequestParam(name = "math", required = false, defaultValue = "0") double math,
-                               Model model) {
+            @RequestParam(name = "pe", required = false, defaultValue = "0") double pe,
+            @RequestParam(name = "civics", required = false, defaultValue = "0") double civics,
+            @RequestParam(name = "econ", required = false, defaultValue = "0") double econ,
+            @RequestParam(name = "elective", required = false, defaultValue = "0") double elective,
+            @RequestParam(name = "fafl", required = false, defaultValue = "0") double fafl,
+            @RequestParam(name = "art", required = false, defaultValue = "0") double art,
+            @RequestParam(name = "health", required = false, defaultValue = "0") double health,
+            @RequestParam(name = "lifescience", required = false, defaultValue = "0") double lifescience,
+            @RequestParam(name = "physicalscience", required = false, defaultValue = "0") double physicalscience,
+            @RequestParam(name = "ushistory", required = false, defaultValue = "0") double ushistory,
+            @RequestParam(name = "whistory", required = false, defaultValue = "0") double whistory,
+            Model model) {
         model.addAttribute("english", english / 40 * 100);
         model.addAttribute("math", math / 20 * 100);
+        model.addAttribute("pe", pe / 20 * 100);
+        model.addAttribute("civics", civics / 5 * 100);
+        model.addAttribute("econ", econ / 5 * 100);
+        model.addAttribute("elective", elective / 85 * 100);
+        model.addAttribute("fafl", fafl / 5 * 100);
+        model.addAttribute("art", art / 5 * 100);
+        model.addAttribute("health", health / 5 * 100);
+        model.addAttribute("lifescience", lifescience / 10 * 100);
+        model.addAttribute("physicalscience", physicalscience / 10 * 100);
+        model.addAttribute("ushistory", ushistory / 10 * 100);
+        model.addAttribute("whistory", whistory / 10 * 100);
         return "/services/requirements";
     }
 }
