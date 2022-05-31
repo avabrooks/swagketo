@@ -41,20 +41,13 @@
 
         <div>
             <div class="row align-items-md-stretch">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>User</th>
-                        <th>Post Content</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr th:each="posts : ${list}">
-                        <td th:text="${posts.name}"></td>
-                        <td th:text="${posts.message}"></td>
-                    </tr>
-                    </tbody>
-                </table>
+                <div th:each="posts : ${list}" class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 th:text="${posts.name}"></h5>
+                        <p th:text="${posts.message}"></p>
+
+                    </div>
+                </div>
             </div>
 
         </div>

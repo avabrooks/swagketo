@@ -35,6 +35,6 @@ public class PostsSqlMvcController {
             return "userpages/createpost";
         }
         repository.save(posts);
-        return "redirect:/userpages/allposts";
+        return "redirect:/allposts";
     }
 }

@@ -15,17 +15,9 @@
 <th:block layout:fragment="body" th:remove="tag">
     <div class="container">
 
-        <form class="form-inline" action="#" th:action="@{/createpost}" th:object="${Posts}" method="POST">
-            <div class="form-group mb-2 mr-sm-2">
-                <label for="message">Name:</label>
-                <input type="name" th:field="*{name}" id="name">
-                <small th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</small>
-            </div>
-            <div class="form-group mb-2 mr-sm-2">
-                <label for="message">Message:</label>
-                <input type="message" th:field="*{message}" id="message">
-                <small th:if="${#fields.hasErrors('message')}" th:errors="*{message}">Message Error</small>
-            </div>
+        <form class="form-inline" action="#" th:action="@{/createpost}" th:object="${posts}" method="POST">
+            <input type="text" th:field="*{name}" id="name" name="name" placeholder="Enter Name" required>
+            <input type="text" th:field="*{message}" id="message" name="message" placeholder="Enter Message" required>
 
             <button type="submit" class="btn btn-primary">Post</button>
         </form>
