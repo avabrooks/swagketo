@@ -1,10 +1,14 @@
 package com.nighthawk.csa;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
+import com.nighthawk.csa.database.user.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.validation.Valid;
 
 @Controller
 public class MainController {
@@ -29,6 +33,16 @@ public class MainController {
     @GetMapping("/login")
     public String login() {
         return "/userpages/login";
+    }
+
+    /* Gathers the attributes filled out in the form, tests for and retrieves validation error
+    @param - Person object with @Valid
+    @param - BindingResult object
+     */
+    @PostMapping("/login")
+    public String loginRedirect(@Valid User user, BindingResult bindingResult) {
+        // Redirect to next step
+        return "redirect:/profile";
     }
 
     @GetMapping("/signup")
