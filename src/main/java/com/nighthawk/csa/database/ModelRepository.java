@@ -51,25 +51,31 @@ public class ModelRepository implements UserDetailsService {  // "implements" ti
 
 
 
-    /* UserDetailsService Overrides and maps Person & Roles POJO into Spring Security
+    /* UserDetailsService Overrides and maps Person & Roles POJO into Spring Security */
     @Override
-    public org.springframework.security.core.userdetails.UserDetails loadUserByUsername(String message) throws UsernameNotFoundException {
-        Posts posts = PostsJpaRepository.findByMessage(message); // setting variable user equal to the method finding the username in the database
-        if(posts==null){
+    public org.springframework.security.core.userdetails.UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        System.out.println("this is running");
+        User users = UserJpaRepository.findByEmail(email); // setting variable user equal to the method finding the username in the database
+        if(users==null){
             throw new UsernameNotFoundException("User not found in database");
         }
         Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
-        posts.getRoles().forEach(role -> { //loop through roles
+        users.getRoles().forEach(role -> { //loop through roles
             authorities.add(new SimpleGrantedAuthority(role.getName())); //create a SimpleGrantedAuthority by passed in role, adding it all to the authorities list, list of roles gets past in for spring security
         });
-        return new org.springframework.security.core.userdetails.User(posts.getMessage(), posts.getName(), authorities);
+        return new org.springframework.security.core.userdetails.User(users.getEmail(), users.getPassword(), authorities);
     }
-    */
 
+
+    /*
 
     @Override
     public org.springframework.security.core.userdetails.UserDetails loadUserByUsername(String message) throws UsernameNotFoundException {
         Posts posts = PostsJpaRepository.findByMessage(message); // setting variable user equal to the method finding the username in the database
+        System.out.println("its running this portion");
+        Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
+        return new org.springframework.security.core.userdetails.User(posts.getMessage(), posts.getName(), authorities);
+
         if(posts==null){
             throw new UsernameNotFoundException("User not found in database");
         }
@@ -78,7 +84,7 @@ public class ModelRepository implements UserDetailsService {  // "implements" ti
             authorities.add(new SimpleGrantedAuthority(role.getName())); //create a SimpleGrantedAuthority by passed in role, adding it all to the authorities list, list of roles gets past in for spring security
         });
         return new org.springframework.security.core.userdetails.User(posts.getMessage(), authorities);
-    }
+    }*/
 
 
 
