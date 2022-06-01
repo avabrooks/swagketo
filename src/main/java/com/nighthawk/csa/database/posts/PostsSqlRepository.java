@@ -13,19 +13,8 @@ import java.util.List;
 public class PostsSqlRepository {
     @Autowired
     private PostsJpaRepository jpa;
-    private UserJpaRepository userjpa;
 
-    //public  List<Posts>listAll() {
-        //return jpa.findAll();
-    //}
 
-    //public void save(Posts message) {
-      //  jpa.save(message);
-    //}
-
-    public User get(long id) {
-        return userjpa.findById(id).get();
-    }
 
     public void delete(long id) {
         jpa.deleteById(id);
