@@ -22,6 +22,9 @@ public class Posts {
     private Long id;
 
     @NotEmpty
+    private String role;
+
+    @NotEmpty
     private String message;
 
     @NonNull
@@ -29,8 +32,9 @@ public class Posts {
     private String name;
 
 
-    public Posts(String message, String name) {
+    public Posts(String message, String name, String role) {
         this.name = name;
+        this.role = role;
         this.message = message;
     }
 
@@ -40,6 +44,7 @@ public class Posts {
     public String getMessage(){
         return message;
     }
+    public String getRole(){return role;}
 
 
 }

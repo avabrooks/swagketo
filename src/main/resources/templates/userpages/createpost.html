@@ -13,11 +13,26 @@
 
 
 <th:block layout:fragment="body" th:remove="tag">
+<div class="container py-4">
+    <header class="pb-3 mb-4 border-bottom border-primary text-dark">
+        <span class="fs-4">Create Post</span>
+    </header>
     <div class="container">
 
         <form class="form-inline" action="#" th:action="@{/createpost}" th:object="${posts}" method="POST">
+
+            <label for="name">Name:</label>
             <input type="text" th:field="*{name}" id="name" name="name" placeholder="Enter Name" required>
+            <br>
+            <br>
+            <label for="role">Role:</label>
+            <input type="text" th:field="*{role}" id="role" name="role" placeholder="I am a..." required>
+            <br>
+            <br>
+            <label for="message">Message:</label>
             <input type="text" th:field="*{message}" id="message" name="message" placeholder="Enter Message" required>
+            <br>
+            <br>
 
             <button type="submit" class="btn btn-primary">Post</button>
         </form>
@@ -26,6 +41,7 @@
 
 
     </div>
+</div>
 
 
 
