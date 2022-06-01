@@ -1,6 +1,6 @@
 {% include navigation.html %}
 # Sponsor Agreements
-- [ ] login/signup page
+- []login/signup page
 - [ ] user creation w/ profile page
 - [ ] grade calculator
 - [ ] resume creator
