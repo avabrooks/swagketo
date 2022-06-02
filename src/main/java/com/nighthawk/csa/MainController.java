@@ -30,6 +30,13 @@ public class MainController {
         return "/userpages/profile";
     }
 
+    // test
+    @GetMapping("/process")
+    public String processLogin() {
+        // session.setAttribute("name", "Atta");
+        return "redirect:/profile";
+    }
+
     @GetMapping("/login")
     public String login() {
         return "/userpages/login";

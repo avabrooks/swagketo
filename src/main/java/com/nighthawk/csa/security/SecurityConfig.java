@@ -57,11 +57,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin()
                 .loginPage("/login")
+                .defaultSuccessUrl("/process", true)
                 .permitAll()
                 .and()
                 .logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/database/user")
+                .logoutSuccessUrl("/userpages/profile")
                 .permitAll()
         ;
         // Cross-Site Request Forgery needs to be disabled to allow activation of JS Fetch URIs
