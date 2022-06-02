@@ -26,7 +26,7 @@ public class PostsApiController {
 
 
     @PostMapping(value = "/search", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Object> personSearch(RequestEntity<Object> request) {
+    public ResponseEntity<Object> postsSearch(RequestEntity<Object> request) {
 
         // extract term from RequestEntity
         JSONObject json = new JSONObject((Map) Objects.requireNonNull(request.getBody()));
